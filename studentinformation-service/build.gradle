@@ -1,0 +1,5 @@
+dependencies {
+	compile project(':studentinformation-domain')
+	compile project(':studentinformation-dao')
+}
+

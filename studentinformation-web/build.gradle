@@ -1,0 +1,30 @@
+buildscript {
+    ext { 
+    	springBootVersion = '1.5.4.RELEASE' 
+    }
+    repositories { 
+    	mavenLocal()
+    	mavenCentral()
+    }
+    
+    dependencies { 
+    	classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}" 
+    }
+}
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+repositories {
+    // You can declare any Maven/Ivy/file repository here.
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+	compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+	compile "org.springframework.boot:spring-boot-starter-thymeleaf:$springBootVersion"
+    compile "org.springframework.boot:spring-boot-devtools:$springBootVersion"
+	compile project(':studentinformation-service')
+	compile project(':studentinformation-domain')
+}

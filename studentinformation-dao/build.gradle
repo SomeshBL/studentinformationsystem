@@ -1,0 +1,7 @@
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-data-jpa:1.5.3.RELEASE"
+    runtime 'mysql:mysql-connector-java:5.1.6'
+    compile project(':studentinformation-domain')
+}
+
